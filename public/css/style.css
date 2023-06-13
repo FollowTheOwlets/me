@@ -93,7 +93,6 @@
   }
 }
 .wrapper .content .frame .info {
-  width: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -391,7 +390,7 @@
 }
 @media only screen and (max-width: 500px) and (min-height: 700px) {
   .wrapper {
-    grid-template-columns: 125px calc(100vw - 125px);
+    grid-template-columns: 115px calc(100vw - 115px);
   }
   .wrapper .header {
     flex-direction: column;
@@ -400,11 +399,11 @@
   }
   .wrapper .header .menu {
     flex-direction: column;
-    margin: 20px 10px;
+    margin: 20px 5px;
     gap: 40px;
   }
   .wrapper .header .menu .menu__item {
-    font-size: small;
+    font-size: smaller;
     text-align: center;
     letter-spacing: -0.2px;
   }
@@ -430,15 +429,14 @@
   .wrapper .frame {
     grid-template-rows: repeat(2, 1fr);
     position: relative;
-    padding-left: 15px;
   }
   .wrapper .frame .info {
     padding: 0;
   }
   .wrapper .frame .info__header {
-    font-size: x-large;
+    font-size: large;
     margin-bottom: 10px;
-    margin-top: 58vw;
+    margin-top: 60vw;
   }
   .wrapper .frame.exp .info__header {
     margin-top: 15px;
@@ -446,20 +444,20 @@
   .wrapper .frame .marquee-container {
     padding: 0;
     line-height: 1.2;
-    margin: 5px 5px 30px;
+    margin: 0px 0px 30px;
   }
   .wrapper .frame .marquee-container .marquee {
-    margin: 10px;
+    margin: 5px;
   }
   .wrapper .frame .marquee-container .marquee span {
-    font-size: small;
+    font-size: x-small;
   }
   .wrapper .frame .info__body {
-    font-size: medium;
+    font-size: small;
     margin-bottom: 10px;
   }
   .wrapper .frame .info__body .project .project__name {
-    font-size: medium;
+    font-size: small;
   }
   .wrapper .frame .info__body .project .project__stack {
     font-size: small;
@@ -469,14 +467,14 @@
     border-radius: 10px;
   }
   .wrapper .frame .info__footer {
-    font-size: small;
+    font-size: x-small;
     margin-bottom: 30px;
   }
   .wrapper .frame .info__footer ul {
     gap: 5px;
   }
   .wrapper .frame .info__footer li {
-    font-size: small;
+    font-size: x-small;
     padding: 4px 8px;
   }
   .wrapper .frame .image {
