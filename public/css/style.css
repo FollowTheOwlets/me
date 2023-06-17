@@ -9,6 +9,7 @@
   width: 100vw;
   height: 100vh;
   display: grid;
+  overflow: hidden;
 }
 .wrapper .header {
   display: flex;
@@ -74,6 +75,9 @@
 .wrapper .content {
   display: flex;
   justify-content: center;
+  min-width: 230px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .wrapper .content .frame {
   width: 90%;
@@ -103,8 +107,7 @@
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid #555;
-  background-color: #222;
-  color: white;
+  color: #222;
 }
 .wrapper .content .frame .info .marquee-container .marquee span {
   text-transform: uppercase;
@@ -124,6 +127,32 @@
 }
 .wrapper .content .frame .info .info__body ul .project .project__name {
   font-weight: 500;
+}
+.wrapper .content .frame .info .info__body ul .project .project__code, .wrapper .content .frame .info .info__body ul .project .project__view, .wrapper .content .frame .info .info__body ul .project .project__demo {
+  font-weight: 500;
+  border-radius: 6px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+}
+.wrapper .content .frame .info .info__body ul .project .project__code:hover, .wrapper .content .frame .info .info__body ul .project .project__view:hover, .wrapper .content .frame .info .info__body ul .project .project__demo:hover {
+  opacity: 1;
+}
+.wrapper .content .frame .info .info__body ul .project .project__code {
+  background-color: hsl(0, 20%, 50%);
+}
+.wrapper .content .frame .info .info__body ul .project .project__view {
+  background-color: hsl(90, 20%, 50%);
+}
+.wrapper .content .frame .info .info__body ul .project .project__demo {
+  background-color: hsl(200, 20%, 50%);
+}
+.wrapper .content .frame .info .info__body ul .project .project__links {
+  margin-top: 5px;
 }
 .wrapper .content .frame .info .info__body ul .project .project__stack {
   display: flex;
@@ -245,6 +274,12 @@
   .wrapper .frame .info__body .project .project__name {
     font-size: medium;
   }
+  .wrapper .frame .info__body .project .project__code, .wrapper .frame .info__body .project .project__view, .wrapper .frame .info__body .project .project__demo {
+    font-size: x-small;
+  }
+  .wrapper .frame .info__body .project .project__code i, .wrapper .frame .info__body .project .project__view i, .wrapper .frame .info__body .project .project__demo i {
+    font-size: x-small;
+  }
   .wrapper .frame .info__body .project .project__stack {
     font-size: x-small;
   }
@@ -351,6 +386,12 @@
   }
   .wrapper .frame .info__body .project .project__name {
     font-size: large;
+  }
+  .wrapper .frame .info__body .project .project__code, .wrapper .frame .info__body .project .project__view, .wrapper .frame .info__body .project .project__demo {
+    font-size: x-small;
+  }
+  .wrapper .frame .info__body .project .project__code i, .wrapper .frame .info__body .project .project__view i, .wrapper .frame .info__body .project .project__demo i {
+    font-size: x-small;
   }
   .wrapper .frame .info__body .project .project__stack {
     font-size: medium;
@@ -459,6 +500,12 @@
   .wrapper .frame .info__body .project .project__name {
     font-size: small;
   }
+  .wrapper .frame .info__body .project .project__code, .wrapper .frame .info__body .project .project__view, .wrapper .frame .info__body .project .project__demo {
+    font-size: x-small;
+  }
+  .wrapper .frame .info__body .project .project__code i, .wrapper .frame .info__body .project .project__view i, .wrapper .frame .info__body .project .project__demo i {
+    font-size: x-small;
+  }
   .wrapper .frame .info__body .project .project__stack {
     font-size: small;
   }
@@ -547,6 +594,12 @@
   }
   .wrapper .frame .info__body .project .project__name {
     font-size: x-large;
+  }
+  .wrapper .frame .info__body .project .project__code, .wrapper .frame .info__body .project .project__view, .wrapper .frame .info__body .project .project__demo {
+    font-size: small;
+  }
+  .wrapper .frame .info__body .project .project__code i, .wrapper .frame .info__body .project .project__view i, .wrapper .frame .info__body .project .project__demo i {
+    font-size: small;
   }
   .wrapper .frame .info__body .project .project__stack {
     font-size: small;
@@ -649,6 +702,12 @@
   }
   .wrapper .frame .info__body .project .project__name {
     font-size: x-large;
+  }
+  .wrapper .frame .info__body .project .project__code, .wrapper .frame .info__body .project .project__view, .wrapper .frame .info__body .project .project__demo {
+    font-size: medium;
+  }
+  .wrapper .frame .info__body .project .project__code i, .wrapper .frame .info__body .project .project__view i, .wrapper .frame .info__body .project .project__demo i {
+    font-size: medium;
   }
   .wrapper .frame .info__body .project .project__stack {
     font-size: small;

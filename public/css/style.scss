@@ -11,6 +11,7 @@ $black: #222;
   width: 100vw;
   height: 100vh;
   display: grid;
+  overflow: hidden;
 
   .header {
     display: flex;
@@ -93,6 +94,9 @@ $black: #222;
   .content {
     display: flex;
     justify-content: center;
+    min-width: 230px;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .frame {
       width: 90%;
@@ -127,8 +131,7 @@ $black: #222;
           border-radius: 5px;
           overflow: hidden;
           border: 1px solid #555;
-          background-color: $black;
-          color: white;
+          color: $black;
 
           .marquee {
 
@@ -156,6 +159,39 @@ $black: #222;
 
               .project__name {
                 font-weight: 500;
+              }
+
+              .project__code, .project__view, .project__demo {
+                font-weight: 500;
+                border-radius: 6px;
+                margin-right: 10px;
+                padding: 5px 10px;
+                color: white;
+                cursor: pointer;
+                width: fit-content;
+                opacity: 0.6;
+                transition: opacity 0.4s;
+
+              }
+
+              .project__code:hover, .project__view:hover, .project__demo:hover {
+                opacity: 1;
+              }
+
+              .project__code {
+                background-color: hsl(0, 20%, 50%);
+              }
+
+              .project__view {
+                background-color: hsl(90, 20%, 50%);
+              }
+
+              .project__demo {
+                background-color: hsl(200, 20%, 50%);
+              }
+
+              .project__links {
+                margin-top: 5px;
               }
 
               .project__stack {
@@ -229,13 +265,13 @@ $black: #222;
 
   }
 
-  @media only screen  and (max-width: 1024px) and (max-height: 700px) {
+  @media only screen and (max-width: 1024px) and (max-height: 700px) {
     grid-template-columns: 110px calc(100vw - 110px);
 
 
     .header {
       flex-direction: column;
-      justify-content: space-between ;
+      justify-content: space-between;
       border-right: 2px solid #77777733;
 
 
@@ -245,7 +281,7 @@ $black: #222;
         gap: 40px;
 
         .menu__item {
-          font-size: small ;
+          font-size: small;
           text-align: center;
 
           .item__line {
@@ -273,7 +309,7 @@ $black: #222;
     .content {
       overflow-y: auto;
       overflow-x: hidden;
-      align-items: flex-start ;
+      align-items: flex-start;
       height: 100vh;
     }
 
@@ -283,13 +319,13 @@ $black: #222;
       padding-left: 15px;
 
       .info {
-        padding: 0 ;
+        padding: 0;
       }
 
       .info__header {
-        font-size: x-large ;
-        margin-bottom: 10px ;
-        margin-top: 34vh ;
+        font-size: x-large;
+        margin-bottom: 10px;
+        margin-top: 34vh;
       }
 
       &.exp {
@@ -299,8 +335,8 @@ $black: #222;
       }
 
       .marquee-container {
-        padding: 0 ;
-        line-height: 0.8 ;
+        padding: 0;
+        line-height: 0.8;
         margin: 5px 5px 30px;
 
         .marquee {
@@ -313,20 +349,28 @@ $black: #222;
       }
 
       .info__body {
-        font-size: medium ;
-        margin-bottom: 10px ;
+        font-size: medium;
+        margin-bottom: 10px;
 
         .project {
           .project__name {
-            font-size: medium ;
+            font-size: medium;
+          }
+
+          .project__code, .project__view, .project__demo {
+            font-size:  x-small;
+
+            i {
+              font-size: x-small;
+            }
           }
 
           .project__stack {
-            font-size: x-small ;
+            font-size: x-small;
 
             span {
-              padding: 4px 8px ;
-              border-radius: 10px ;
+              padding: 4px 8px;
+              border-radius: 10px;
             }
           }
 
@@ -334,25 +378,26 @@ $black: #222;
       }
 
       .info__footer {
-        font-size: small ;
-        margin-bottom: 30px ;
+        font-size: small;
+        margin-bottom: 30px;
+
         ul {
-          gap: 5px ;
+          gap: 5px;
         }
 
         li {
-          font-size: small ;
-          padding: 4px 8px ;
+          font-size: small;
+          padding: 4px 8px;
         }
       }
 
       .image {
-        position: absolute ;
+        position: absolute;
         top: 10px;
         left: 20px;
-        width: 30vh ;
-        height: 30vh ;
-        border-radius: 50% ;
+        width: 30vh;
+        height: 30vh;
+        border-radius: 50%;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -360,20 +405,20 @@ $black: #222;
         filter: grayscale(0.4);
 
         img {
-          height: 100% ;
-          width: auto ;
+          height: 100%;
+          width: auto;
         }
       }
     }
   }
 
-  @media only screen and (min-width: 500px)   and (max-width: 1024px) and (min-height: 700px) {
+  @media only screen and (min-width: 500px) and (max-width: 1024px) and (min-height: 700px) {
     grid-template-columns: 130px calc(100vw - 130px);
 
 
     .header {
       flex-direction: column;
-      justify-content: space-between ;
+      justify-content: space-between;
       border-right: 2px solid #77777733;
 
 
@@ -383,7 +428,7 @@ $black: #222;
         gap: 40px;
 
         .menu__item {
-          font-size: medium ;
+          font-size: medium;
           text-align: center;
 
           .item__line {
@@ -411,7 +456,7 @@ $black: #222;
     .content {
       overflow-y: auto;
       overflow-x: hidden;
-      align-items: flex-start ;
+      align-items: flex-start;
       height: 100vh;
     }
 
@@ -421,13 +466,13 @@ $black: #222;
       padding-left: 15px;
 
       .info {
-        padding: 0 ;
+        padding: 0;
       }
 
       .info__header {
-        font-size: xx-large ;
-        margin-bottom: 10px ;
-        margin-top: 55vw ;
+        font-size: xx-large;
+        margin-bottom: 10px;
+        margin-top: 55vw;
       }
 
       &.exp {
@@ -437,7 +482,7 @@ $black: #222;
       }
 
       .marquee-container {
-        padding: 0 ;
+        padding: 0;
         line-height: 1.2;
         margin: 5px 5px 30px;
 
@@ -451,20 +496,28 @@ $black: #222;
       }
 
       .info__body {
-        font-size: large ;
-        margin-bottom: 10px ;
+        font-size: large;
+        margin-bottom: 10px;
 
         .project {
           .project__name {
-            font-size: large ;
+            font-size: large;
+          }
+
+          .project__code, .project__view, .project__demo {
+            font-size: x-small;
+
+            i {
+              font-size: x-small;
+            }
           }
 
           .project__stack {
-            font-size: medium ;
+            font-size: medium;
 
             span {
-              padding: 4px 8px ;
-              border-radius: 10px ;
+              padding: 4px 8px;
+              border-radius: 10px;
             }
           }
 
@@ -472,25 +525,26 @@ $black: #222;
       }
 
       .info__footer {
-        font-size: medium ;
-        margin-bottom: 30px ;
+        font-size: medium;
+        margin-bottom: 30px;
+
         ul {
-          gap: 5px ;
+          gap: 5px;
         }
 
         li {
-          font-size: large ;
-          padding: 4px 8px ;
+          font-size: large;
+          padding: 4px 8px;
         }
       }
 
       .image {
-        position: absolute ;
+        position: absolute;
         top: 25px;
         left: 20px;
-        width: 50vw ;
-        height: 50vw ;
-        border-radius: 50% ;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -498,20 +552,20 @@ $black: #222;
         filter: grayscale(0.4);
 
         img {
-          height: 100% ;
-          width: auto ;
+          height: 100%;
+          width: auto;
         }
       }
     }
   }
 
-  @media only screen  and (max-width: 500px) and (min-height: 700px) {
+  @media only screen and (max-width: 500px) and (min-height: 700px) {
     grid-template-columns: 115px calc(100vw - 115px);
 
 
     .header {
       flex-direction: column;
-      justify-content: space-between ;
+      justify-content: space-between;
       border-right: 2px solid #77777733;
 
 
@@ -521,7 +575,7 @@ $black: #222;
         gap: 40px;
 
         .menu__item {
-          font-size: smaller ;
+          font-size: smaller;
           text-align: center;
           letter-spacing: -0.2px;
 
@@ -548,7 +602,7 @@ $black: #222;
     .content {
       overflow-y: auto;
       overflow-x: hidden;
-      align-items: flex-start ;
+      align-items: flex-start;
       height: 100vh;
     }
 
@@ -557,13 +611,13 @@ $black: #222;
       position: relative;
 
       .info {
-        padding: 0 ;
+        padding: 0;
       }
 
       .info__header {
-        font-size: large ;
-        margin-bottom: 10px ;
-        margin-top: 60vw ;
+        font-size: large;
+        margin-bottom: 10px;
+        margin-top: 60vw;
       }
 
       &.exp {
@@ -573,7 +627,7 @@ $black: #222;
       }
 
       .marquee-container {
-        padding: 0 ;
+        padding: 0;
         line-height: 1.2;
         margin: 0px 0px 30px;
 
@@ -587,20 +641,28 @@ $black: #222;
       }
 
       .info__body {
-        font-size: small ;
-        margin-bottom: 10px ;
+        font-size: small;
+        margin-bottom: 10px;
 
         .project {
           .project__name {
-            font-size: small ;
+            font-size: small;
+          }
+
+          .project__code, .project__view, .project__demo {
+            font-size: x-small;
+
+            i {
+              font-size: x-small;
+            }
           }
 
           .project__stack {
-            font-size: small ;
+            font-size: small;
 
             span {
-              padding: 4px 8px ;
-              border-radius: 10px ;
+              padding: 4px 8px;
+              border-radius: 10px;
             }
           }
 
@@ -608,25 +670,26 @@ $black: #222;
       }
 
       .info__footer {
-        font-size: x-small ;
-        margin-bottom: 30px ;
+        font-size: x-small;
+        margin-bottom: 30px;
+
         ul {
-          gap: 5px ;
+          gap: 5px;
         }
 
         li {
-          font-size: x-small ;
-          padding: 4px 8px ;
+          font-size: x-small;
+          padding: 4px 8px;
         }
       }
 
       .image {
-        position: absolute ;
+        position: absolute;
         top: 25px;
         left: 20px;
-        width: 50vw ;
-        height: 50vw ;
-        border-radius: 50% ;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -634,14 +697,14 @@ $black: #222;
         filter: grayscale(0.4);
 
         img {
-          height: 100% ;
-          width: auto ;
+          height: 100%;
+          width: auto;
         }
       }
     }
   }
 
-  @media only screen and (min-width: 1024px)  and (max-width: 1500px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1500px) {
     grid-template-rows: 90px calc(100vh - 90px);
 
     .header {
@@ -649,6 +712,7 @@ $black: #222;
 
       .menu {
         gap: 20px;
+
         .menu__item {
           font-size: large;
           letter-spacing: 0.7px;
@@ -662,6 +726,7 @@ $black: #222;
       .contacts {
         .contacts__link {
           flex-direction: column;
+
           span {
             font-size: x-small;
           }
@@ -672,7 +737,7 @@ $black: #222;
     .content {
       overflow-y: auto;
       overflow-x: hidden;
-      align-items: flex-start ;
+      align-items: flex-start;
     }
 
     .frame {
@@ -708,6 +773,14 @@ $black: #222;
 
           .project__name {
             font-size: x-large;
+          }
+
+          .project__code, .project__view, .project__demo {
+            font-size: small;
+
+            i {
+              font-size: small;
+            }
           }
 
           .project__stack {
@@ -792,7 +865,7 @@ $black: #222;
     }
   }
 
-  @media only screen  and (min-width: 1500px) {
+  @media only screen and (min-width: 1500px) {
     grid-template-rows: 64px calc(100vh - 64px);
 
     .header {
@@ -800,6 +873,7 @@ $black: #222;
 
       .menu {
         gap: 40px;
+
         .menu__item {
           font-size: x-large;
 
@@ -855,6 +929,14 @@ $black: #222;
 
           .project__name {
             font-size: x-large;
+          }
+
+          .project__code, .project__view, .project__demo {
+            font-size: medium;
+
+            i {
+              font-size: medium;
+            }
           }
 
           .project__stack {
