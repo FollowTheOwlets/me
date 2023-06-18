@@ -103,16 +103,15 @@
 .wrapper .content .frame .info .info__header {
   font-weight: 700;
 }
-.wrapper .content .frame .info .marquee-container {
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #555;
-  color: #222;
+.wrapper .content .frame .info .cloud-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.wrapper .content .frame .info .marquee-container .marquee span {
-  text-transform: uppercase;
-  margin-right: 30px;
-  font-weight: 600;
+.wrapper .content .frame .info .cloud-container .cloud img {
+  width: 100%;
+  height: auto;
 }
 .wrapper .content .frame .info .info__body {
   font-weight: 500;
@@ -256,16 +255,8 @@
   .wrapper .frame.exp .info__header {
     margin-top: 15px;
   }
-  .wrapper .frame .marquee-container {
-    padding: 0;
-    line-height: 0.8;
-    margin: 5px 5px 30px;
-  }
-  .wrapper .frame .marquee-container .marquee {
-    margin: 5px;
-  }
-  .wrapper .frame .marquee-container .marquee span {
-    font-size: xx-small;
+  .wrapper .frame .cloud {
+    width: 85%;
   }
   .wrapper .frame .info__body {
     font-size: medium;
@@ -369,16 +360,8 @@
   .wrapper .frame.exp .info__header {
     margin-top: 15px;
   }
-  .wrapper .frame .marquee-container {
-    padding: 0;
-    line-height: 1.2;
-    margin: 5px 5px 30px;
-  }
-  .wrapper .frame .marquee-container .marquee {
-    margin: 10px;
-  }
-  .wrapper .frame .marquee-container .marquee span {
-    font-size: small;
+  .wrapper .frame .cloud {
+    width: 85%;
   }
   .wrapper .frame .info__body {
     font-size: large;
@@ -482,16 +465,8 @@
   .wrapper .frame.exp .info__header {
     margin-top: 15px;
   }
-  .wrapper .frame .marquee-container {
-    padding: 0;
-    line-height: 1.2;
-    margin: 0px 0px 30px;
-  }
-  .wrapper .frame .marquee-container .marquee {
-    margin: 5px;
-  }
-  .wrapper .frame .marquee-container .marquee span {
-    font-size: x-small;
+  .wrapper .frame .cloud {
+    width: 85%;
   }
   .wrapper .frame .info__body {
     font-size: small;
@@ -580,13 +555,8 @@
     font-size: x-large;
     margin-bottom: 20px;
   }
-  .wrapper .frame .marquee-container {
-    line-height: 1.5;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  .wrapper .frame .marquee-container .marquee span {
-    font-size: small;
+  .wrapper .frame .cloud {
+    width: 85%;
   }
   .wrapper .frame .info__body {
     font-size: medium;
@@ -688,13 +658,8 @@
     font-size: xxx-large;
     margin-bottom: 40px;
   }
-  .wrapper .frame .marquee-container {
-    line-height: 1.5;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  .wrapper .frame .marquee-container .marquee span {
-    font-size: medium;
+  .wrapper .frame .cloud {
+    width: 75%;
   }
   .wrapper .frame .info__body {
     font-size: x-large;
