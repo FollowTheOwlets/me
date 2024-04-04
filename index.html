@@ -20,7 +20,7 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#contact">Контакты</a></li>
+          <li><a href="#exp">Опыт</a></li>
           <li class="separator"></li>
           <li><a href="#skills">Навыки</a></li>
           <li class="separator"></li>
@@ -29,7 +29,7 @@
       </nav>
     </header>
     <main>
-      <section id="about">
+      <section class="active" id="about">
         <h2>DESIGN x WEB x ANDROID</h2>
         <div class="content">
           <div class="content__part">
@@ -37,32 +37,83 @@
             <p class="list">Специализируюсь на мобильной и веб разработке</p>
             <p class="list">Основал и руковожу командой разработки GasuDev</p>
             <p class="list">Поддерживаю проекты в сфере образования и стартап Инношкола</p>
-            <div class="links"><a class="link-circle" href="https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');"></a><a class="link-circle" href="https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');"></a><a class="link-circle" href=" https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');"></a></div>
+            <div class="links"><a class="link-circle" aria-label="Github" href="https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');"></a><a class="link-circle" aria-label="GasuDev" href="https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');"></a><a class="link-circle" aria-label="Telegram" href="https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');"></a></div>
           </div>
           <div class="content__part">
-            <div class="image" style="--url: url('/files/img/about.jpg');"></div>
+            <div class="image" style="--url: url('/files/img/about.webp');"></div>
           </div>
         </div>
       </section>
       <section id="skills">
-        <h2>Навыки</h2>
-        <ul class="skills-list">
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>Разработка на React, Vue.js</li>
-          <li>Backend-разработка на Node.js, Express</li>
-        </ul>
+        <h2>НАВЫКИ х ТЕХНОЛОГИИ</h2>
+        <div class="content">
+          <div class="content__part">
+            <h3>
+               Гибкость и <br>масштабируемость</h3>
+            <p class="list" style="text-transform:uppercase;">Design patterns</p>
+            <p class="list" style="text-transform:uppercase;">Code Review</p>
+            <p class="list" style="text-transform:uppercase;">Software architecture</p>
+            <p class="list" style="text-transform:uppercase;">Mentoring</p>
+          </div>
+          <div class="content__part">
+            <ul class="skills-list">
+              <li class="black xxl">TypeScript</li>
+              <li class="black">Java</li>
+              <li class="black s">C++</li>
+              <li class="white">NestJS</li>
+              <li class="white">Spring</li>
+              <li class="white">Express</li>
+              <li class="black xl">PostgreSQL</li>
+              <li class="black">SQLite</li>
+              <li class="black m">Redis</li>
+              <li>React</li>
+              <li class="m">Pug</li>
+              <li class="xl">Vaadin</li>
+              <li class="black s">Qt</li>
+              <li class="black xl">JavaFx</li>
+              <li class="black xl">Android</li>
+              <li class="white">Gulp</li>
+              <li class="white">Maven</li>
+              <li class="white">Webpack</li>
+              <li class="xxl">Docker</li>
+              <li class="m">Git</li>
+              <li class="m">Jira</li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <section id="contact">
-        <h2>Контакты</h2>
-        <p>Чтобы связаться со мной, пожалуйста, используйте один из следующих способов:</p>
-        <ul class="contact-list">
-          <li>Email: your.email@example.com</li>
-          <li>LinkedIn: [your LinkedIn profile](https://linkedin.com)</li>
-        </ul>
+      <section id="exp">
+        <h2>ОПЫТ РАБОТЫ</h2>
+        <div class="content"> 
+          <div class="content__part">
+            <ul class="work-grid">
+              <li class="comp">СПБГАСУ УИТ</li>
+              <li class="year">2021 - 2023</li>
+              <li class="description">Веб разработчик</li>
+              <li class="comp">IT School CodeSpace</li>
+              <li class="year">2022 - 2024</li>
+              <li class="description">Технический директор</li>
+              <li class="comp">GasuDev</li>
+              <li class="year">2023 - ...</li>
+              <li class="description">Руководитель команды - TeamLead</li>
+              <li class="comp">АИСА</li>
+              <li class="year">2023 - ...</li>
+              <li class="description">Веб-разработчик</li>
+            </ul>
+          </div>
+          <div class="content__part">
+            <h3>Решаемые задачи</h3>
+            <p class="list">Разработка LMS платформ с нуля</p>
+            <p class="list">Поддержка приложений на проме</p>
+            <p class="list">Разработка сервисов для работы с ЦЭП</p>
+            <p class="list">Администрирование и развертывание приложений</p>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
       <p>© 2024 FollowTheOwlets</p>
     </footer>
+    <script async src="/out/index.js"> </script>
   </body>
 </html>

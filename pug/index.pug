@@ -20,7 +20,7 @@ html(lang="ru")
       nav
         ul
           li
-            a(href="#contact") Контакты
+            a(href="#exp") Опыт
           li.separator
           li
             a(href="#skills") Навыки
@@ -28,7 +28,7 @@ html(lang="ru")
           li
             a(href="#about") Главная
     main
-      section#about
+      section.active#about
         h2 DESIGN x WEB x ANDROID
         .content
           .content__part
@@ -37,22 +37,69 @@ html(lang="ru")
             p.list Основал и руковожу командой разработки GasuDev
             p.list Поддерживаю проекты в сфере образования и стартап Инношкола
             .links
-              a.link-circle(href= "https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');")
-              a.link-circle(href= "https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');")
-              a.link-circle(href= " https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');")
+              a.link-circle(aria-label="Github" href= "https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');")
+              a.link-circle(aria-label="GasuDev" href= "https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');")
+              a.link-circle(aria-label="Telegram" href= "https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');")
           .content__part
-            .image(style="--url: url('/files/img/about.jpg');")
+            .image(style="--url: url('/files/img/about.webp');")
       section#skills
-        h2 Навыки
-        ul.skills-list
-          li HTML5, CSS3, JavaScript
-          li Разработка на React, Vue.js
-          li Backend-разработка на Node.js, Express
-      section#contact
-        h2 Контакты
-        p Чтобы связаться со мной, пожалуйста, используйте один из следующих способов:
-        ul.contact-list
-          li Email: your.email@example.com
-          li LinkedIn: [your LinkedIn profile](https://linkedin.com)
+        h2 НАВЫКИ х ТЕХНОЛОГИИ
+        .content
+          .content__part
+            h3 
+              |Гибкость и 
+              br
+              |масштабируемость
+            p.list(style="text-transform:uppercase;") Design patterns
+            p.list(style="text-transform:uppercase;") Code Review
+            p.list(style="text-transform:uppercase;") Software architecture
+            p.list(style="text-transform:uppercase;") Mentoring
+          .content__part
+            ul.skills-list
+              li.black.xxl TypeScript
+              li.black Java
+              li.black.s C++
+              li.white NestJS
+              li.white Spring
+              li.white Express
+              li.black.xl PostgreSQL
+              li.black SQLite
+              li.black.m Redis
+              li React
+              li.m Pug
+              li.xl Vaadin
+              li.black.s Qt
+              li.black.xl JavaFx
+              li.black.xl Android
+              li.white Gulp
+              li.white Maven
+              li.white Webpack
+              li.xxl Docker
+              li.m Git
+              li.m Jira
+      section#exp
+        h2 ОПЫТ РАБОТЫ
+        .content 
+          .content__part
+            ul.work-grid
+              li.comp СПБГАСУ УИТ
+              li.year 2021 - 2023
+              li.description Веб разработчик
+              li.comp IT School CodeSpace
+              li.year 2022 - 2024
+              li.description Технический директор
+              li.comp GasuDev
+              li.year 2023 - ...
+              li.description Руководитель команды - TeamLead
+              li.comp АИСА
+              li.year 2023 - ...
+              li.description Веб-разработчик
+          .content__part
+            h3 Решаемые задачи
+            p.list Разработка LMS платформ с нуля
+            p.list Поддержка приложений на проме
+            p.list Разработка сервисов для работы с ЦЭП
+            p.list Администрирование и развертывание приложений
     footer
       p © 2024 FollowTheOwlets
+    script(async src="/out/index.js") 

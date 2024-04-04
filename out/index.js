@@ -1,0 +1,1 @@
+const ACTIVE="active";document.addEventListener("DOMContentLoaded",e=>{const t=document.querySelectorAll("section"),o=document.querySelector("main"),n=t[0].offsetHeight;let s=0;o.addEventListener("scroll",()=>{const e=Math.floor((+o.scrollTop+n/2)/n);e!==s&&(s=e,(e=>{for(let t=0;t<e.length;t++)e[t].classList.remove(ACTIVE)})(t),t[Math.max(0,e)].classList.add(ACTIVE))})});
