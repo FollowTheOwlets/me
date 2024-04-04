@@ -1,0 +1,58 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Портфолио Веб-Разработчика Федоричев Лев Александрович
+    meta(name="description", content="Портфолио веб-разработчика Федоричева Льва Александровича, включающее проекты, навыки и контактную информацию.")
+    meta(name="keywords", content="Федоричев Лев, веб-разработчик, портфолио, front-end, back-end, разработка сайтов")
+    meta(property="og:title", content="Портфолио Веб-Разработчика Федоричев Лев Александрович")
+    meta(property="og:description", content="Портфолио веб-разработчика Федоричева Льва Александровича, включающее проекты, навыки и контактную информацию.")
+    meta(property="og:image", content="image_link.jpg")
+    meta(property="og:url", content="http://www.yourwebsite.com")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:title", content="Портфолио Веб-Разработчика Федоричев Лев Александрович")
+    meta(name="twitter:description", content="Портфолио веб-разработчика Федоричева Льва Александровича, включающее проекты, навыки и контактную информацию.")
+    meta(name="twitter:image", content="image_link.jpg")
+    link(async rel="stylesheet", href="/out/style.css")
+  body
+    header
+      nav
+        ul
+          li
+            a(href="#contact") Контакты
+          li.separator
+          li
+            a(href="#skills") Навыки
+          li.separator
+          li
+            a(href="#about") Главная
+    main
+      section#about
+        h2 DESIGN x WEB x ANDROID
+        .content
+          .content__part
+            h3 Федоричев Лев
+            p.list Специализируюсь на мобильной и веб разработке
+            p.list Основал и руковожу командой разработки GasuDev
+            p.list Поддерживаю проекты в сфере образования и стартап Инношкола
+            .links
+              a.link-circle(href= "https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');")
+              a.link-circle(href= "https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');")
+              a.link-circle(href= " https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');")
+          .content__part
+            .image(style="--url: url('/files/img/about.jpg');")
+      section#skills
+        h2 Навыки
+        ul.skills-list
+          li HTML5, CSS3, JavaScript
+          li Разработка на React, Vue.js
+          li Backend-разработка на Node.js, Express
+      section#contact
+        h2 Контакты
+        p Чтобы связаться со мной, пожалуйста, используйте один из следующих способов:
+        ul.contact-list
+          li Email: your.email@example.com
+          li LinkedIn: [your LinkedIn profile](https://linkedin.com)
+    footer
+      p © 2024 FollowTheOwlets
