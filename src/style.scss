@@ -122,14 +122,57 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3rem;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 1rem;
 
             .content__part {
                 padding: 1rem;
                 border-radius: 0.4rem;
                 backdrop-filter: blur(10px);
-                flex-grow: 1;
                 overflow: hidden;
+
+                &.project {
+                    max-width: 30rem;
+
+                    .logo {
+                        width: 2rem;
+                        height: 2rem;
+                        overflow: hidden;
+                        border-radius: 0.2rem;
+
+                        background-image: var(--url);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    h3 {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                    h3,
+                    p {
+                        margin-bottom: 0.4rem;
+                    }
+
+                    .link {
+                        display: inline-block;
+                        width: 2rem;
+                        height: 2rem;
+                        opacity: 0.6;
+                        transition: opacity 0.4s;
+
+                        background-image: url('/files/img/link.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
 
                 h3 {
                     margin-bottom: 1rem;
@@ -143,6 +186,15 @@ main {
                         content: '◈';
                         margin-right: 0.2rem;
                     }
+                }
+
+                .role {
+                    font-weight: 800;
+                }
+
+                .status {
+                    font-weight: 600;
+                    text-decoration: underline;
                 }
 
                 .image {
@@ -242,6 +294,10 @@ main {
                         }
                     }
                 }
+            }
+
+            .content__part:has(.work-grid) {
+                flex-grow: 1;
             }
 
             .content__part:has(.image) {

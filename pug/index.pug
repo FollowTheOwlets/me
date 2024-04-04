@@ -20,6 +20,9 @@ html(lang="ru")
       nav
         ul
           li
+            a(href="#projects") Проекты
+          li.separator
+          li
             a(href="#exp") Опыт
           li.separator
           li
@@ -39,6 +42,7 @@ html(lang="ru")
             .links
               a.link-circle(aria-label="Github" href= "https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');")
               a.link-circle(aria-label="GasuDev" href= "https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');")
+              a.link-circle(aria-label="Инношкола" href= "https://ит.инношкола.рф" style="--url: url('/files/img/innoshkola.svg');")
               a.link-circle(aria-label="Telegram" href= "https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');")
           .content__part
             .image(style="--url: url('/files/img/about.webp');")
@@ -100,6 +104,32 @@ html(lang="ru")
             p.list Поддержка приложений на проме
             p.list Разработка сервисов для работы с ЦЭП
             p.list Администрирование и развертывание приложений
+      section#projects
+        h2 ПРОЕКТЫ
+        .content 
+          .content__part.project
+            h3 
+              .logo(style="--url: url('/files/img/doc-service.svg');")
+              |SmallBuild
+              a.link( target="_blank" aria-label="SmallBuild" href= "https://gasu.neocities.org")
+            p.role Руководитель проекта. Старший разработчик
+            p.status Релиз
+            p.description Симулятор жизненного цикла строительной фирмы. Выполнено по заказу ФЭУ СПБГАСУ.
+          .content__part.project
+            h3 Док Сервис
+            p.role Собственная разработка
+            p.status Релиз
+            p.description  Приложение для выдачи сертификатов об обучении подписанных ЭЦП. Выполнено для использования IT школой CodeSpace.
+          .content__part.project
+            h3 KidHub
+            p.role Собственная разработка
+            p.status Демо тестирование
+            p.description LMS система с интерактивными модулями и корпоративная платформа. Разрабатывается по заказу ООО Инношкола.
+          .content__part.project
+            h3 СПБГАСУ мобайл
+            p.role Руководитель проекта. Архитектор
+            p.status Активная разработка
+            p.description Мобильное приложение университета, включающее интеграции с LMS Moodle и 1C сервисами университета.
     footer
       p © 2024 FollowTheOwlets
     script(async src="/out/index.js") 
