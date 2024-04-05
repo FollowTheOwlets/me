@@ -28,7 +28,7 @@ body {
     background: linear-gradient(180deg, var(--white), var(--offwhite));
     color: var(--charcoal);
 
-    cursor: url('./files/cursors/arrow.png'), auto;
+    cursor: url('../files/cursors/arrow.png'), auto;
 }
 
 ul,
@@ -39,7 +39,7 @@ ol {
 a {
     text-decoration: none;
     color: var(--charcoal);
-    cursor: url('./files/cursors/link.png'), auto;
+    cursor: url('../files/cursors/link.png'), auto;
 }
 
 a.link-circle {
@@ -415,19 +415,19 @@ main {
     }
 
     #about .back {
-        background-image: url('./files/img/backs/about-back.svg');
+        background-image: url('../files/img/backs/about-back.svg');
     }
 
     #skills .back {
-        background-image: url('./files/img/backs/skills-back.svg');
+        background-image: url('../files/img/backs/skills-back.svg');
     }
 
     #exp .back {
-        background-image: url('./files/img/backs/exp-back.svg');
+        background-image: url('../files/img/backs/exp-back.svg');
     }
 
     #projects .back {
-        background-image: url('./files/img/backs/projects-back.svg');
+        background-image: url('../files/img/backs/projects-back.svg');
     }
 }
 
