@@ -1,4 +1,5 @@
 const ACTIVE = 'active';
+const DEACTIVE = 'deactive';
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const sections = document.querySelectorAll('section');
@@ -6,9 +7,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const height = sections[0].offsetHeight;
     let prevCurrent = 0;
 
-    const clear = (sections) => {
-        for (let i = 0; i < sections.length; i++) {
-            sections[i].classList.remove(ACTIVE);
+    const clear = (nodes) => {
+        for (let i = 0; i < nodes.length; i++) {
+            nodes[i].classList.remove(ACTIVE);
         }
     };
 
@@ -18,5 +19,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
         prevCurrent = current;
         clear(sections);
         sections[Math.max(0, current)].classList.add(ACTIVE);
+    });
+
+    const projects = document.querySelectorAll('.projects__block');
+    const icons = document.querySelectorAll('.projects__icons-list .logo');
+    let prevProject = document.querySelector('.projects__block.active');
+
+    document.addEventListener('click', ({ target }) => {
+        const { active } = target.dataset;
+
+        if (!active) return;
+
+        clear(projects);
+        clear(icons);
+
+        target.classList.add(ACTIVE);
+        prevProject.classList.remove(ACTIVE);
+        prevProject.classList.add(DEACTIVE);
+        const temp = prevProject;
+
+        setTimeout(() => {
+            temp.classList.remove(DEACTIVE);
+        }, 600);
+
+        prevProject = document.querySelector(`.projects__block.${active}`);
+        prevProject.classList.add(ACTIVE);
     });
 });

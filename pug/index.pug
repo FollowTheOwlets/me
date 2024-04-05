@@ -32,7 +32,7 @@ html(lang="ru")
             a(href="#about") Главная
     main
       section.active#about
-        h2 DESIGN x WEB x ANDROID
+        .back
         .content
           .content__part
             h3 Федоричев Лев
@@ -40,14 +40,14 @@ html(lang="ru")
             p.list Основал и руковожу командой разработки GasuDev
             p.list Поддерживаю проекты в сфере образования и стартап Инношкола
             .links
-              a.link-circle(aria-label="Github" href= "https://github.com/FollowTheOwlets" style="--url: url('/files/img/github.svg');")
-              a.link-circle(aria-label="GasuDev" href= "https://dev.spbgasu.ru" style="--url: url('/files/img/gasudev.svg');")
-              a.link-circle(aria-label="Инношкола" href= "https://ит.инношкола.рф" style="--url: url('/files/img/innoshkola.svg');")
-              a.link-circle(aria-label="Telegram" href= "https://t.me/teamlead_gasu" style="--url: url('/files/img/telegram.svg');")
+              a.link-circle(aria-label="Github" href= "https://github.com/FollowTheOwlets" style="--url: url('/files/img/links/github.svg');")
+              a.link-circle(aria-label="GasuDev" href= "https://dev.spbgasu.ru" style="--url: url('/files/img/links/gasudev.svg');")
+              a.link-circle(aria-label="Инношкола" href= "https://ит.инношкола.рф" style="--url: url('/files/img/links/innoshkola.svg');")
+              a.link-circle(aria-label="Telegram" href= "https://t.me/teamlead_gasu" style="--url: url('/files/img/links/telegram.svg');")
           .content__part
             .image(style="--url: url('/files/img/about.webp');")
       section#skills
-        h2 НАВЫКИ х ТЕХНОЛОГИИ
+        .back
         .content
           .content__part
             h3 
@@ -82,7 +82,7 @@ html(lang="ru")
               li.m Git
               li.m Jira
       section#exp
-        h2 ОПЫТ РАБОТЫ
+        .back
         .content 
           .content__part
             ul.work-grid
@@ -105,31 +105,70 @@ html(lang="ru")
             p.list Разработка сервисов для работы с ЦЭП
             p.list Администрирование и развертывание приложений
       section#projects
-        h2 ПРОЕКТЫ
+        .back
         .content 
-          .content__part.project
-            h3 
-              .logo(style="--url: url('/files/img/doc-service.svg');")
-              |SmallBuild
-              a.link( target="_blank" aria-label="SmallBuild" href= "https://gasu.neocities.org")
-            p.role Руководитель проекта. Старший разработчик
-            p.status Релиз
-            p.description Симулятор жизненного цикла строительной фирмы. Выполнено по заказу ФЭУ СПБГАСУ.
-          .content__part.project
-            h3 Док Сервис
-            p.role Собственная разработка
-            p.status Релиз
-            p.description  Приложение для выдачи сертификатов об обучении подписанных ЭЦП. Выполнено для использования IT школой CodeSpace.
-          .content__part.project
-            h3 KidHub
-            p.role Собственная разработка
-            p.status Демо тестирование
-            p.description LMS система с интерактивными модулями и корпоративная платформа. Разрабатывается по заказу ООО Инношкола.
-          .content__part.project
-            h3 СПБГАСУ мобайл
-            p.role Руководитель проекта. Архитектор
-            p.status Активная разработка
-            p.description Мобильное приложение университета, включающее интеграции с LMS Moodle и 1C сервисами университета.
+          .projects 
+            .projects__icons-list
+              .logo.active(style="--url: url('/files/img/logos/gasubuild.png');" data-active='gasubuild') 
+              .logo(style="--url: url('/files/img/logos/aisbpek.svg');" data-active='aisbpek')  
+              .logo(style="--url: url('/files/img/logos/gasu-app.png');" data-active='gasu-app')
+              .logo(style="--url: url('/files/img/logos/doc-service.svg');" data-active='doc-service') 
+              .logo(style="--url: url('/files/img/logos/kidhub.svg');" data-active='kidhub')  
+              .logo(style="--url: url('/files/img/logos/codespace.svg');" data-active='codespace')  
+              .logo(style="--url: url('/files/img/logos/gasudev.svg');" data-active='gasudev')  
+            .projects__blocks-list 
+              .projects__block.gasubuild.active
+                .header 
+                  h3 GasuBuild
+                  a.link( target="_blank" aria-label="SmallBuild" href= "https://gasu.neocities.org")
+                p.role Руководитель проекта. Старший разработчик
+                .description 
+                  p.status Релиз
+                  p Симулятор жизненного цикла строительной фирмы. Выполнено по заказу ФЭУ СПБГАСУ.
+              .projects__block.doc-service
+                .header
+                  h3 Док Сервис
+                p.role Собственная разработка
+                .description  
+                  p.status Релиз
+                  p Приложение для выдачи сертификатов об обучении подписанных ЭЦП. Выполнено для использования IT школой CodeSpace.
+              .projects__block.kidhub
+                .header
+                  h3 KidHub
+                p.role Собственная разработка
+                .description 
+                  p.status Демо тестирование
+                  p LMS система с интерактивными модулями и корпоративная платформа. Разрабатывается по заказу ООО Инношкола.
+              .projects__block.aisbpek
+                .header
+                  h3 АИСПБ-ЭК
+                p.role Веб разработчик
+                .description 
+                  p.status Активная разработка
+                  p Программное обеспечение для обслуживания документооборота Комитета финансов Санкт-Петербурга.
+              .projects__block.gasu-app
+                .header 
+                  h3 GASU app
+                p.role Руководитель проекта. Архитектор
+                .description 
+                  p.status Старт разработки
+                  p Мобильное приложение университета, включающее интеграции с LMS Moodle и 1C сервисами университета.
+              .projects__block.codespace
+                .header 
+                  h3 Сайт CodeSpace
+                  a.link( target="_blank" aria-label="codespace_link" href= "https://ит.инношкола.рф")
+                p.role Собственная разработка
+                .description 
+                  p.status Релиз
+                  p Сайт IT школы CodeSpace. Содержит панель администратора для обработки заявок с telegram бота и самого сайта.
+              .projects__block.gasudev
+                .header 
+                  h3 Сайт GasuDev
+                  a.link( target="_blank" aria-label="gasudev_link" href= "https://dev.spbgasu.ru")
+                p.role Собственная разработка
+                .description 
+                  p.status Релиз
+                  p Сайт команды разработки GasuDev.
     footer
       p © 2024 FollowTheOwlets
     script(async src="/out/index.js") 
