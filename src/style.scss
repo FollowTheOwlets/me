@@ -406,7 +406,7 @@ main {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
-                    
+
                     &:hover {
                         opacity: 1;
                     }
@@ -477,4 +477,28 @@ footer {
             padding-bottom: 1rem;
         }
     }
+}
+
+@keyframes ripple-effect {
+    from {
+        opacity: 0.1;
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        opacity: 0;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--charcoal);
+    animation: ripple-effect 0.5s linear forwards;
+    pointer-events: none;
 }

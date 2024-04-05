@@ -44,3 +44,18 @@ document.addEventListener('click', ({ target }) => {
     prevProject = document.querySelector(`.projects__block.${active}`);
     prevProject.classList.add(ACTIVE);
 });
+
+const createRipple = (event) => {
+    const ripple = document.createElement('div');
+    ripple.classList.add('ripple');
+    ripple.style.left = `${event.clientX}px`;
+    ripple.style.top = `${event.clientY}px`;
+
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 1000);
+};
+
+document.addEventListener('mousemove', createRipple);
