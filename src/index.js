@@ -3,7 +3,6 @@ const DEACTIVE = 'deactive';
 
 const sections = document.querySelectorAll('section');
 const main = document.querySelector('main');
-const height = sections[0].offsetHeight;
 let prevCurrent = 0;
 
 const clear = (nodes) => {
@@ -13,6 +12,7 @@ const clear = (nodes) => {
 };
 
 main.addEventListener('scroll', () => {
+    const height = sections[0].offsetHeight;
     const current = Math.floor((+main.scrollTop + height / 2) / height);
     if (current === prevCurrent) return;
     prevCurrent = current;
