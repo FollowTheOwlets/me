@@ -24,6 +24,7 @@ body {
     font-weight: 400;
     box-sizing: border-box;
     display: flex;
+    overflow: hidden;
 
     background: linear-gradient(180deg, var(--white), var(--offwhite));
     color: var(--charcoal);
