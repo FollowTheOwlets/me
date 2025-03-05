@@ -36,9 +36,10 @@ html(lang="ru")
         .content
           .content__part
             h3 Федоричев Лев
-            p.list Специализируюсь на мобильной и веб разработке
+            p.list BackLead и TechLead кроссплатформенных команд
             p.list Основал и руковожу командой разработки GasuDev
-            p.list Поддерживаю проекты в сфере образования и стартап Инношкола
+            p.list Занимал роли ведущего разработчика в командах Сбербанка, Рольфа и Ситилаба
+            p.list Поддерживаю проекты в сфере EduTech
             .links
               a.link-circle(aria-label="Github" href= "https://github.com/FollowTheOwlets" style="--url: url('../files/img/links/github.svg');")
               a.link-circle(aria-label="GasuDev" href= "https://dev.spbgasu.ru" style="--url: url('../files/img/links/gasudev.svg');")
@@ -58,117 +59,113 @@ html(lang="ru")
             p.list(style="text-transform:uppercase;") Code Review
             p.list(style="text-transform:uppercase;") Software architecture
             p.list(style="text-transform:uppercase;") Mentoring
+            p.list(style="text-transform:uppercase;") Extremal MVP
           .content__part
             ul.skills-list
-              li.black.xxl TypeScript
-              li.black Java
-              li.black.s C++
+              li.black.xl TypeScript
+              li.black.m Java
+              li.black Kotlin
               li.white NestJS
               li.white Spring
               li.white Express
               li.black.xl PostgreSQL
-              li.black SQLite
+              li.black Kafka
               li.black.m Redis
-              li React
-              li.m Pug
-              li.xl Vaadin
-              li.black.s Qt
-              li.black.xl JavaFx
-              li.black.xl Android
-              li.white Gulp
-              li.white Maven
-              li.white Webpack
-              li.xxl Docker
-              li.m Git
-              li.m Jira
+              li.m MongoDB
+              li Type ORM
+              li.xl Jest
+              li.black.s Swagger
+              li.black.xl gRPC
+              li.black.xl GraphQL
+              li.white.m ELK
+              li.white Saga
+              li.white.xl Inbox Outbox
+              li.xl OpenShift
+              li.m K8s
+              li Gitlab CI
       section#exp
         .back
         .content 
           .content__part
             ul.work-grid
               li.comp СПБГАСУ УИТ
-              li.year 2021 - 2023
+              li.year 1 года
               li.description Веб разработчик
-              li.comp IT School CodeSpace
-              li.year 2022 - 2024
-              li.description Технический директор
               li.comp GasuDev
-              li.year 2023 - ...
-              li.description Руководитель команды - TeamLead
-              li.comp АИСА
-              li.year 2023 - ...
-              li.description Веб-разработчик
+              li.year 3 года
+              li.description
+                | Middle JS Developer
+                i.part(style="padding: 0.2pm;font-") 2/3
+              li.description
+                | Senior JS Developer (Lead)
+                i.part(style="padding: 0.2pm;font-") 1/3
+              li.comp IT School CodeSpace
+              li.year 2 года
+              li.description TechLead
+              li.comp СберБанк
+              li.year 1 год
+              li.description Senior Java Developer
           .content__part
-            h3 Решаемые задачи
-            p.list Разработка LMS платформ с нуля
-            p.list Поддержка приложений на проме
-            p.list Разработка сервисов для работы с ЦЭП
-            p.list Администрирование и развертывание приложений
+            h3 Решенные задачи
+            p.list
+              | Со своей командой разработал LMS
+              br
+              | и сервис видеоконференций KidsChat
+            p.list Внедрил Detect во все сервисы команды
+            p.list Создал IT отдел студенческой активной разработки в СПБГАСУ
+            p.list
+              | Совместно с разработкой сервиса выпуска сертификатов
+              br
+              | реализовал библиотеку для построения таких сервисов
+              br
+              | и инициировал продажу нескольких MVP
       section#projects
         .back
         .content 
           .projects 
             .projects__icons-list
-              .logo.active(style="--url: url('../files/img/logos/gasubuild.png');" data-active='gasubuild') 
-              .logo(style="--url: url('../files/img/logos/aisbpek.svg');" data-active='aisbpek')  
+              .logo(style="background-color:white;--url: url('../files/img/logos/vector.png');" data-active='vector')
+              .logo.active(style="--url: url('../files/img/logos/gasubuild.png');" data-active='gasubuild')
               .logo(style="--url: url('../files/img/logos/gasu-app.png');" data-active='gasu-app')
-              .logo(style="--url: url('../files/img/logos/doc-service.svg');" data-active='doc-service') 
-              .logo(style="--url: url('../files/img/logos/kidhub.svg');" data-active='kidhub')  
-              .logo(style="--url: url('../files/img/logos/codespace.svg');" data-active='codespace')  
-              .logo(style="--url: url('../files/img/logos/gasudev.svg');" data-active='gasudev')  
-            .projects__blocks-list 
+              .logo(style="--url: url('../files/img/logos/doc-service.svg');" data-active='doc-service')
+              .logo(style="--url: url('../files/img/logos/kidhub.svg');" data-active='kidhub')
+            .projects__blocks-list
               .projects__block.gasubuild.active
                 .header 
                   h3 GasuBuild
                   a.link( target="_blank" aria-label="SmallBuild" href= "https://gasu.neocities.org")
-                p.role Руководитель проекта. Старший разработчик
+                p.role Инди разработка
                 .description 
                   p.status Релиз
                   p Симулятор жизненного цикла строительной фирмы. Выполнено по заказу ФЭУ СПБГАСУ.
               .projects__block.doc-service
                 .header
                   h3 Док Сервис
-                p.role Собственная разработка
+                p.role BackLead
                 .description  
                   p.status Релиз
                   p Приложение для выдачи сертификатов об обучении подписанных ЭЦП. Выполнено для использования IT школой CodeSpace.
               .projects__block.kidhub
                 .header
                   h3 KidHub
-                p.role Собственная разработка
+                p.role BackLead
                 .description 
-                  p.status Демо тестирование
+                  p.status Релиз
                   p LMS система с интерактивными модулями и корпоративная платформа. Разрабатывается по заказу ООО Инношкола.
-              .projects__block.aisbpek
-                .header
-                  h3 АИСПБ-ЭК
-                p.role Веб разработчик
-                .description 
-                  p.status Активная разработка
-                  p Программное обеспечение для обслуживания документооборота Комитета финансов Санкт-Петербурга.
               .projects__block.gasu-app
                 .header 
                   h3 GASU app
-                p.role Руководитель проекта. Архитектор
+                p.role Руководитель проекта. Senior Fullstack Developer
                 .description 
-                  p.status Старт разработки
+                  p.status Релиз
                   p Мобильное приложение университета, включающее интеграции с LMS Moodle и 1C сервисами университета.
-              .projects__block.codespace
-                .header 
-                  h3 Сайт CodeSpace
-                  a.link( target="_blank" aria-label="codespace_link" href= "https://ит.инношкола.рф")
-                p.role Собственная разработка
-                .description 
-                  p.status Релиз
-                  p Сайт IT школы CodeSpace. Содержит панель администратора для обработки заявок с telegram бота и самого сайта.
-              .projects__block.gasudev
-                .header 
-                  h3 Сайт GasuDev
-                  a.link( target="_blank" aria-label="gasudev_link" href= "https://dev.spbgasu.ru")
-                p.role Собственная разработка
-                .description 
-                  p.status Релиз
-                  p Сайт команды разработки GasuDev.
+              .projects__block.vector
+                .header
+                  h3 Sber
+                p.role Senior Developer
+                .description
+                  p.status Развитие существующего проекта
+                  p Продукт оценивающий деловую репутацию физических и юридических лиц.
     footer
       p © 2024 FollowTheOwlets
     script(src="./out/index.js") 
